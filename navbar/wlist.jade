@@ -1,0 +1,8 @@
+template(name='wlist')
+  if visible
+    form.navbar-form.navbar-left(role='search')
+      .form-group
+        input#username.form-control(type='text')
+      button#addUser.btn.btn-default(type='submit') Add
+      if jk 
+        button#removeUser.btn.btn-warn(type='submit') Remove

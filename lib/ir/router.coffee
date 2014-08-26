@@ -1,3 +1,4 @@
+# this is for both server and client sides
 Router.configure  
   	layoutTemplate: 'layout'
   	loadingTemplate: 'loading'
