@@ -1,19 +1,18 @@
 template(name='dropdown1')
   if visible
-    li.dropdown
-      a.dropdown-toggle(href='#', data-toggle='dropdown')
-        | Dropdown
-        strong.caret
-      ul.dropdown-menu
-        li
-          a(href='#') Action
-        li
-          a(href='#') Another action
-        li
-          a(href='#') Something else here
-        li.divider
-        li
-          a(href='#') Separated link
-        li.divider
-        li
-          a(href='#') One more separated link
+    a.dropdown-toggle(href='#', data-toggle='dropdown')
+      | Dropdown
+      strong.caret
+    ul.dropdown-menu
+      li
+        a(href='#') Action
+      li
+        a(href='#') Another action
+      li
+        a(href='#') Something else here
+      li.divider
+      li
+        a(href='#') Separated link
+      li.divider
+      li
+        a(href='#') One more separated link
