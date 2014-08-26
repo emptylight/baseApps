@@ -1,6 +1,16 @@
 template(name='layout')
 	.container
-		+header
-		+errors
+		.row.clearfix
+			.col-md-12.column
+				+navbar 
+				+header
+				+errors
+				.row.clearfix
+					.col-md-12.column
+						if currentUser
+							+yield
+						else
+							+splash
+	//- 
 		#main.row-fluid
 			+yield
