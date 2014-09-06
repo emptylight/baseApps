@@ -1,8 +1,9 @@
 template(name='navbar')
   nav.navbar.navbar-default(role='navigation')
     +brand
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    #navbar-collapse.collapse.navbar-collapse
       +navbarnav
       +searchform
       +wlist
+      +DynamicTemplate template= getTemplate data= getDataContext
       +navbarright

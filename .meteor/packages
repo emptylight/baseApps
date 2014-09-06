@@ -9,11 +9,9 @@ accounts-base
 accounts-password
 jquery
 email
-cmather:iron-router@0.8.2
 mrt:accounts-ui-bootstrap-3-blaze@0.3.10
 alethes:pages@1.0.20
 accounts-meteor-developer
 mizzao:bootstrap-3
 aldeed:autoform
-waitingkuo:jade
-
+iron:dynamic-template
