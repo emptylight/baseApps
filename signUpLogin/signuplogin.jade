@@ -20,11 +20,11 @@ template(name='login')
   h1  Sign In 
   form.form-horizontal(role='form')
     .form-group
-      label.col-sm-2.control-label(for='su-username') Username
+      label.col-sm-2.control-label(for='li-username') Username
       .col-sm-10
         input#li-username(type='text', placeholder='Username')
     .form-group
-      label.col-sm-2.control-label(for='su-Password') Password
+      label.col-sm-2.control-label(for='li-Password') Password
       .col-sm-10
         input#li-password(type='password', placeholder='Password')
     .form-group
@@ -47,7 +47,7 @@ template(name='signupLogin')
 
   #login
     if loggingIn
-        h1  Logging In ... 
+      h1  Logging In ... 
     else if currentUser
       +logout
     else if visable
