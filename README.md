@@ -5,10 +5,10 @@ Folder Arrangements:
 ===
 
 Use functional folders instead of structural folders. I.e, 
-` users
+``` users
 	users.html
 	users.js
 	login.html
 	login.js
 	...
-`
+```
