@@ -1,3 +1,5 @@
+Please help me to correct division of code in templates and then cut and paste them back to files
+
 template(name='navbar')
   nav.navbar.navbar-default(role='navigation')
     +brand
@@ -60,7 +62,7 @@ template(name='wlist')
       .form-group
         input#username.form-control(type='text')
       button#addUser.btn.btn-default(type='submit') Add
-      if isAdmin 
+      if jk 
         button#removeUser.btn.btn-warn(type='submit') Remove
 
 

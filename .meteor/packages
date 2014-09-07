@@ -9,7 +9,6 @@ accounts-password
 jquery
 email
 mrt:accounts-ui-bootstrap-3-blaze@0.3.10
-accounts-meteor-developer
 mizzao:bootstrap-3
 iron:dynamic-template
 iron:router
@@ -18,4 +17,5 @@ alethes:pages
 mquandalle:jade
 mizzao:user-status
 meteor-platform
+dburles:collection-helpers
 
