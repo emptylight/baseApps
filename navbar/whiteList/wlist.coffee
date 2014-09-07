@@ -74,3 +74,6 @@ if Meteor.isClient
         $('#username').val('').select().focus()
         
         #console.log this, username
+  
+  Template.home.helpers
+    wlist: -> WList.find {}
