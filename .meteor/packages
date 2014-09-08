@@ -19,4 +19,5 @@ mizzao:user-status
 meteor-platform
 dburles:collection-helpers
 aslagle:reactive-table
+mrt:moment
 

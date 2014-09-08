@@ -1,4 +1,4 @@
-@WList = new Meteor.Collection 'WList'
+WList = new Meteor.Collection 'WList'
 
 jk = 'J.K'
 
@@ -32,7 +32,7 @@ Meteor.users.helpers # see home.jade for example
 # ------------------------------
 if Meteor.isServer
   
-  Meteor.publish "usersApproved", (username) ->
+  Meteor.publish "wlist", (username) ->
     if approved username
       WList.find {} #Meteor.users.find().fetch()
 
@@ -43,9 +43,14 @@ if Meteor.isServer
 # -----------------------------------
 if Meteor.isClient
   
-  Tracker.autorun -> # it works already, without this line
-    Meteor.subscribe "usersApproved", Meteor.user()?.username
+  
 
+  Tracker.autorun -> # it works already, without this line
+  
+    Meteor.subscribe "wlist", Meteor.user()?.username
+
+  
+  
   Template.wlist.helpers
     
     visible: -> Meteor.user()?.username in [jk] #this is not safe

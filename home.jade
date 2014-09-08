@@ -1,5 +1,5 @@
 template(name='home')
   h1 hello #{AppName}
   // the following line utilizes collection-helpers
-  h4 Meteor.user().wlisted(): #{wlisted}
-  +reactiveTable(collection= wlist)
+  if wlisted
+    +reactiveTable(collection= wlist)
