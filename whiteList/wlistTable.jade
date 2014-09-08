@@ -1,0 +1,25 @@
+template(name='wlistTable')
+  +reactiveTable(collection= wlist)
+
+//-template(name='wlistTable')
+  // the following doesn't work and I don't know why
+  #header
+    +yield 'header'
+  
+  #main
+    +yield
+  
+  #footer
+    +yield 'footer'
+
+  
+//-template(name='aTable')
+  +Layout(template='wlistTable')  
+    +contentFor 'header'
+      h1 Approved User List
+    
+    
+    +reactiveTable(collection= wlist)
+
+    +contentFor 'footer'
+      h5 thanks

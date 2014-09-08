@@ -1,21 +1,26 @@
+// Needs more dynamic but I haven't learnt bootstrap yet so let go now
+// CSS tags may need re-arrange
 template(name='navbar')
   nav.navbar.navbar-default(role='navigation')
-    +brand
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      
+      +UI.dynamic template='brand'
+
     #navbar-collapse.collapse.navbar-collapse
-      +navbarnav
+      //+navbarnav equally:
+      +UI.dynamic template='navbarnav'
       +searchform
       +wlist
       +DynamicTemplate template= getTemplate data= getDataContext
       +navbarright
 
 template(name='brand')
-  .navbar-header
-    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
-      span.sr-only Toggle navigation
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
-    a.navbar-brand(href='/') #{AppName}
+  a.navbar-brand(href='/') #{AppName}
 
 template(name='navbarnav')
   ul.nav.navbar-nav
