@@ -112,8 +112,8 @@ if Meteor.isClient
   # 以此爲例,如home這個template放在此處覺得不妥,則可以寫一個wlistForm template
   # Template.home.helpers
   Template.wlistTable.helpers
-    #wlist: -> WList.find {}
-    wlist: -> Meteor.users.find {}
+    wlist: -> WList.find {}
+    #wlist: -> Meteor.users.find {}
   ###
   Template.aTable.helpers
     wlist: -> WList.find {}
