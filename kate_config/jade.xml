@@ -2,17 +2,17 @@
 <!DOCTYPE language SYSTEM "language.dtd">
 <language name="Jade" version="1.1" kateversion="2.3" section="Markup"
           extensions="*.jade"
-          author="Cies Breijs (cies_at_kde_nl)" license="LGPL"
+          author="Jigme Kuo (jigme1968_at_gmail_com)" license="LGPL"
           mimetype="text/x-jade">
 <!--      mimetype="text/x-jade"     this might be a problem as is doesn't exist -->
 
-<!-- learned and copied a lot from rhtml.xml -->
+<!-- learned and copied a lot from haml.xml -->
 <!-- ripped out some functionality from rhtml, like GDL, maybe put this back in some day... -->
 <!-- rhtml is rails specific, i ripped the rails helper keywords out as i'm a _merb_ guy... -->
 
 <!-- 1.1: fixed many many many buggers, clearly shows how arbitrary the title '1.0' was -->
 
-<!-- TODO: multi-line-based-on-indenting (comments, filters) don't work, mark more errors with error_hl_test.jade(?) (currently only unpaired spaces on indentation), give ruby code a little background, pipe character as a multiline splitter can use a little color (can it be escaped? "\|"), use jades unittests for inspiration for better *_test.jade files -->
+<!-- TODO: multi-line-based-on-indenting (comments, filters) don't work, mark more errors with error_hl_test.jade(?) (currently only unpaired spaces on indentation), give ruby code a little background, pipe character as a multiline splitter can use a little color (can it be escaped? "\|"), use jade unittests for inspiration for better *_test.jade files -->
 
   <highlighting>
 
@@ -492,7 +492,7 @@
       <itemData name="Expression" defStyleNum="dsOthers"/>
       <itemData name="Operator" defStyleNum="dsChar"/>
 
-     <!-- HAML itemData -->
+     <!-- JADE itemData -->
 
       <itemData name="Normal Text" defStyleNum="dsNormal" />
       <itemData name="Hash" defStyleNum="dsNormal" />

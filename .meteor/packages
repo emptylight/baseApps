@@ -8,7 +8,6 @@ accounts-base
 accounts-password
 jquery
 email
-mrt:accounts-ui-bootstrap-3-blaze@0.3.10
 mizzao:bootstrap-3
 iron:dynamic-template
 iron:router
@@ -22,4 +21,6 @@ aslagle:reactive-table
 mrt:moment
 sacha:spin
 alanning:roles
+mrt:accounts-ui-bootstrap-3-blaze
+accounts-ui
 
