@@ -41,28 +41,25 @@ Meteor.users.helpers # using collection-helpers here. See home.jade for example
 if Meteor.isServer
 
   Meteor.publish "wlist", (username) ->
-    if approved username # full properties 
+    if approved username # full properties 發佈全部屬性
       WList.find {}
     else
-      WList.find {}, fields:  # only some fields
-        username: false
+      WList.find {}, fields:  # only some fields 只發佈部分屬性
+        username: true
         # or: 
         # by: true 
         #Meteor.users.find().fetch()
   
-  ###
+  ### Meteor.user
   Meteor.publish "wlist", (username) ->
     if approved username # full properties 
-      #WList.find {}
       Meteor.users.find {}
     else
-      #WList.find {}, fields:  # only some fields
       Meteor.users.find {}, fields:  # only some fields
         username: false
         emails:true
         # or: 
         # by: true 
-        #Meteor.users.find().fetch()
   ###
 
 
