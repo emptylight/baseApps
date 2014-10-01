@@ -12,29 +12,29 @@ admin = 'J.K'
 
 approved = wlisted = (name) ->
   return false unless name?
-  name is admin or WList.findOne(username:name)?
+  name is admin or WList.findOne(用戶名:name)?
 
 
 
 
-# --------------------------------
+# both sides ---------------------
 Meteor.methods
 
   'addUser':(username, newname)->
     if approved username
       WList.insert
-        username: newname
-        by: username
+        用戶名: newname
+        添加人: username
       #console.log "added user #{newname}"
 
   'removeUser':(username, thename)->
     if username is admin
       WList.remove
-        username: thename
+        用戶名: thename
 
 
 Meteor.users.helpers # using collection-helpers here. See home.jade for example
-  wlisted: (username=@username)-> wlisted username
+  wlisted: (@username)-> wlisted username
 
 
 # ------------------------------
