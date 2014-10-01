@@ -1,0 +1,9 @@
+template(name='navbarright')
+  ul.nav.navbar-nav.navbar-right
+    li
+      a(href='https://github.com/emptist/allApps') GitHub
+    li.dropdown
+      +dropdown2
+    li.dropdown
+      if currentUser
+        +loginButtons
