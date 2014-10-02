@@ -12,7 +12,7 @@ if Meteor.isClient
       e.preventDefault()
       Session.set 'signup', false 
 
-  Template.signupLogin_customized.visable = ->
+  Template.signupLogin_customer.visable = ->
     Session.get 'signup'
 
 
