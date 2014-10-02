@@ -26,4 +26,8 @@ yogiben:autoform-modals
 aldeed:collection2
 chrismbeckett:fontawesome4
 yogiben:admin
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem
+yogiben:autoform-file
 

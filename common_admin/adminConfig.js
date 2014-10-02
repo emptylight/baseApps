@@ -1,8 +1,9 @@
 AdminConfig = { 
-adminEmails: ['j@k.com'], 
-collections: 
-{ 
-WList: {},
-MainCollection: {} 
-} 
+  name: AppName,
+  adminEmails: ['j@k.com'], 
+  collections: 
+    { 
+      //WList: {},
+      //MainCollection: {} 
+    } 
 }

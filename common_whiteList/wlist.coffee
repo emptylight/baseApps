@@ -13,7 +13,7 @@ Schema = new SimpleSchema
     type: String
     label: '用戶名'
     max: 50
-  addedBy:
+  添加人:
     type: String
     label: '添加人'
     max: 50
@@ -21,6 +21,7 @@ Schema = new SimpleSchema
 Schemas.WList = Schema  
 
 WList.attachSchema Schema
+AdminConfig.collections.WList = {}
 
 admin = 'J.K'
 
@@ -38,7 +39,7 @@ Meteor.methods
     if approved username
       WList.insert
         username: newname
-        addedBy: username
+        添加人: username
       #console.log "added user #{newname}"
 
   'removeUser':(username, thename)->
@@ -61,7 +62,7 @@ if Meteor.isServer
       WList.find {}, fields:  # only some fields 只發佈部分屬性
         username: true
         # or: 
-        # addedBy: true 
+        # 添加人: true 
         #Meteor.users.find().fetch()
   
   ### Meteor.user
@@ -73,7 +74,7 @@ if Meteor.isServer
         username: false
         emails:true
         # or: 
-        # addedBy: true 
+        # 添加人: true 
   ###
 
 

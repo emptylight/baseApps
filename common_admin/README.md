@@ -1,2 +1,2 @@
 see:
-  [[https://atmospherejs.com/yogiben/admin]]
+  https://atmospherejs.com/yogiben/admin
