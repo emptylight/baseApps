@@ -6,7 +6,19 @@
 #
 ###
 
-WList = new Meteor.Collection 'WList'
+Schema = new SimpleSchema
+  用戶名:
+    type: String
+    label: 'your name'
+    max: 50
+  添加人:
+    type: String
+    label: 'your name'
+    max: 50
+  
+Schemas.WList = Schema  
+
+@WList = new Meteor.Collection 'WList', Schema
 
 admin = 'J.K'
 
@@ -109,6 +121,8 @@ if Meteor.isClient
   # 以此爲例,如home這個template放在此處覺得不妥,則可以寫一個wlistForm template
   # Template.home.helpers
   Template.wlistTable.helpers
+    wlist: -> WList.find {}
+  Template.wlistTableEd.helpers
     wlist: -> WList.find {}
     #wlist: -> Meteor.users.find {}
   ###

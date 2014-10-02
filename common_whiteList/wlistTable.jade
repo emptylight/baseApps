@@ -1,6 +1,16 @@
 template(name='wlistTable')
   +reactiveTable(collection= wlist)
 
+template(name='wlistTableEd')
+  +autoformModals
+  //-a.btn.btn-primary(href='#afModal' collection= 'WList' omitFields='添加人'  operation='insert' buttonContent='New User' title='Add new user' buttonClass='btn-success') Create a new
+
+  each wlist
+    a.btn.btn-primary(href='#afModal' collection= 'WList'   operation='update' doc= #{_id} ) Update
+//-
+  <a href="#afModal" class="btn btn-primary" collection="Posts" operation="update" doc="mpb8f7m6x929DwTau">Update post</a>
+  <a href="#afModal" class="btn btn-primary" collection="Posts" omitFields="createdAt,owner,upvotes" operation="insert" buttonContent="New Challenger" title="Add a new public post" buttonClass="btn-success">Create a new challenger</a>
+  
 //-template(name='wlistTable')
   // the following doesn't work and I don't know why
   #header
