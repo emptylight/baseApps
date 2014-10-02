@@ -6,25 +6,27 @@
 #
 ###
 
+@WList = new Meteor.Collection 'WList' #, Schema
+
 Schema = new SimpleSchema
-  用戶名:
+  username:
     type: String
-    label: 'your name'
+    label: '用戶名'
     max: 50
-  添加人:
+  addedBy:
     type: String
-    label: 'your name'
+    label: '添加人'
     max: 50
   
 Schemas.WList = Schema  
 
-@WList = new Meteor.Collection 'WList', Schema
+WList.attachSchema Schema
 
 admin = 'J.K'
 
 approved = wlisted = (name) ->
   return false unless name?
-  name is admin or WList.findOne(用戶名:name)?
+  name is admin or WList.findOne(username: name)?
 
 
 
@@ -35,14 +37,14 @@ Meteor.methods
   'addUser':(username, newname)->
     if approved username
       WList.insert
-        用戶名: newname
-        添加人: username
+        username: newname
+        addedBy: username
       #console.log "added user #{newname}"
 
   'removeUser':(username, thename)->
     if username is admin
       WList.remove
-        用戶名: thename
+        username: thename
 
 
 Meteor.users.helpers # using collection-helpers here. See home.jade for example
@@ -59,7 +61,7 @@ if Meteor.isServer
       WList.find {}, fields:  # only some fields 只發佈部分屬性
         username: true
         # or: 
-        # by: true 
+        # addedBy: true 
         #Meteor.users.find().fetch()
   
   ### Meteor.user
@@ -71,7 +73,7 @@ if Meteor.isServer
         username: false
         emails:true
         # or: 
-        # by: true 
+        # addedBy: true 
   ###
 
 
