@@ -6,7 +6,7 @@
 #
 ###
 
-@WList = new Meteor.Collection 'WList' #, Schema
+@WList = new Mongo.Collection 'WList' #, Schema
 
 Schema = new SimpleSchema
   username:
@@ -17,11 +17,13 @@ Schema = new SimpleSchema
     type: String
     label: '添加人'
     max: 50
-  
-Schemas.WList = Schema  
+
+Schemas.WList = Schema
 
 WList.attachSchema Schema
+
 AdminConfig.collections.WList = {}
+AdminConfig.adminEmails.push 'j@k.com'
 
 admin = 'J.K'
 
@@ -61,20 +63,20 @@ if Meteor.isServer
     else
       WList.find {}, fields:  # only some fields 只發佈部分屬性
         username: true
-        # or: 
-        # 添加人: true 
+        # or:
+        # 添加人: true
         #Meteor.users.find().fetch()
-  
+
   ### Meteor.user
   Meteor.publish "wlist", (username) ->
-    if approved username # full properties 
+    if approved username # full properties
       Meteor.users.find {}
     else
       Meteor.users.find {}, fields:  # only some fields
         username: false
         emails:true
-        # or: 
-        # 添加人: true 
+        # or:
+        # 添加人: true
   ###
 
 

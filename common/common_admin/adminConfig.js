@@ -1,6 +1,6 @@
 AdminConfig = { 
   name: AppName,
-  adminEmails: ['j@k.com'], 
+  adminEmails: [], 
   collections: 
     { 
       //WList: {},
