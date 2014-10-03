@@ -1,0 +1,46 @@
+template(name='splash2')
+  .container
+    .row.clearfix
+      .col-md-12.column
+        .page-header
+          h1
+            | HQ-Share 
+            small 平台
+        blockquote
+          p
+            span HQ-Share平台是。。。。.
+          small
+            | Someone famous 
+            cite Source Title
+          p.text-primary 注1
+        .row.clearfix
+          .col-md-6.column
+            .jumbotron
+              h1
+                | 欢迎您!
+              p
+                | 欢迎来到 HQ-Share!.
+              p
+                a.btn.btn-primary.btn-large(href='http://www.ailibi.com/') 艾力彼
+              p.text-primary 注2
+          .col-md-6.column
+            +signupLogin_customer
+        address
+          strong 艾力彼, ailibi.com.
+          br
+          |  公司地址
+          br
+          | 公司邮箱等
+          br
+          abbr(title='Phone') P:
+          |  电话
+          br
+          abbr(title='Fax') F:
+          |  传真
+        p.text-primary 注3
+        hr
+        p.text-primary 注：
+          ol
+            li 设计概念：可由名人或公司领导简单宣传或介绍本平台，
+            li 设计概念：这里可以放入欢迎语等，点击这按钮可链接公司网站等
+            li 设计概念：公司基本信息

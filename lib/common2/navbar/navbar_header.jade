@@ -1,0 +1,10 @@
+template(name='navbar_header')
+  .navbar-header
+    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+
+    //+UI.dynamic template='brand' 與下一行寫法意義一樣
+    +brand
