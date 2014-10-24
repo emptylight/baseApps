@@ -31,4 +31,4 @@ cfs:gridfs
 cfs:filesystem
 yogiben:autoform-file
 iron:core
-
+perak:user-roles

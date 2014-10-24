@@ -77,6 +77,7 @@ mrt:moment@2.8.1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.3
 ordered-dict@1.0.1
+perak:user-roles@1.0.10
 raix:eventemitter@0.0.1
 raix:handlebar-helpers@0.1.2
 random@1.0.1
