@@ -1,0 +1,84 @@
+template(name='qshareApplication')
+  .contanier
+    .row-clearfix
+      .col-md-12
+        .col-sm-8.col-sm-offset-2
+          .jumbotron
+            h3.text-center Qshare平台会员申请书
+            form.form-horizontal(role="form")
+              .form-group
+                label.col-sm-2.control-label(for="inputhospitalnameofqs") 医院*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputshengfen") 省份*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputshengfen") 所在市*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputshengfen") 所在县*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputjibie") 分类*
+                .col-sm-10.controls
+                  select(id="jibie" placeholder="点击选择分类")
+                    option 点击选择分类
+                    option 省会市属医院
+                    option 地级城市医院
+                    option 县级医院
+                    option 民营医院
+                    option 中医医院
+                    option 其他
+              .form-group
+                label.col-sm-2.control-label(for="inputjibie") 等级*
+                .col-sm-10.controls
+                  select(id="jibie" placeholder="点击选择等级")
+                    option 点击选择等级
+                    option 一级
+                    option 二乙
+                    option 二甲
+                    option 三乙
+                    option 三甲
+                    option 其他
+              .form-group
+                label.col-sm-2.control-label(for="inputhosad") 医院地址*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputyuanzhangname") 院长姓名*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputconname") 联系人姓名*
+                .col-sm-10
+                  input.form-control(type="text")
+              .form-group
+                label.col-sm-2.control-label(for="inputcondianhua") 联系人固话
+                .col-sm-10
+                  input.form-control(type="text")
+               .form-group
+                label.col-sm-2.control-label(for="inputconphone") 联系人手机*
+                .col-sm-10
+                  input.form-control(type="text")
+                .form-group
+                label.col-sm-2.control-label(for="inputconemail") 联系人邮箱*
+                .col-sm-10
+                  input.form-control(type="email")
+              .form-group
+                label.col-sm-2.control-label(for="inputconphone") 院长手机
+                .col-sm-10
+                  input.form-control(type="text")
+                .form-group
+                label.col-sm-2.control-label(for="inputconemail") 院长邮箱
+                .col-sm-10
+                  input.form-control(type="email")
+            h4
+              small 
+                strong 注:以上标注"*"符号的为必填选项
+          .pull-right
+            a.btn.btn-primary(href="qshareApplicationSuccess") 确认
+            a.btn.btn-warning(href="home") 取消

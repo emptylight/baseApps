@@ -1,0 +1,88 @@
+template(name='spfirstpage')
+  .container
+    .row-clearfix
+      .col-xs-12.column
+        p.text-warning 用户权限：评委
+        h3 XX,welcome!
+        table.table
+          thead
+            tr
+              th
+                | 编号
+              th
+                | 姓名
+              th
+                | 所在学会
+              th
+                | 所在单位
+              th 所在省/直辖市
+              th 所在市
+          tbody
+            tr
+              td
+                | 1
+              td
+                | 张三
+              td
+                | 中华学会
+              td
+                | XX医院
+              td 北京市
+              td 
+            tr
+              td
+                | 2
+              td
+                | 李四
+              td
+                | XX学会
+              td
+                | XX医院
+              td
+                | 广东省
+              td 深圳市
+            tr
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+        ul.pagination
+          li
+            a(href='#') Prev
+          li.disabled
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#') Next
+          p
+            small.text-primary 设计要求：可翻页
+          p
+            small.text-sucess 后台管理：获取各专家信息并显示            
+          .container
+            h3 个人联系信息
+            p 此信息仅作为评审联系用，不会公开，如您的联系方式有所改变，请及时提出修改申请，谢谢！
+            ul
+              li 姓名
+              li 所在学会
+              li 所在单位
+              li 专科
+              li 所在省
+              li 所在市
+            p.text-danger 如发现资料有误或您的联系方式已改变，请点击下面按钮更改
+            a.btn.btn-warning(href="SpecialistMessageEditforsp")  资料修改申请
+            a.btn.btn-primary(href="scorepage") 点此进入评分页面

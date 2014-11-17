@@ -1,0 +1,175 @@
+template(name='allhospital')
+  .container
+    // <span class="glyphicon glyphicon-star-emptyboth"></span>
+    p.text-warning 用户权限：系统管理员
+  .container
+    .row.clearfix
+      .col-md-12.column
+        h3.text-center
+          | 医院列表
+          p
+            small.text-primary 设计要求：数据库上限为5000家医院
+        +HosDropdownList
+          //此template是下拉菜单
+        
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th
+                | 编号
+              th
+                | 医院
+              th
+                | 区域
+              th
+                | 所在省
+              th
+                | 所在市
+              th
+                | 分类
+              th
+                | 级别
+              th
+                | 医院基本信息
+              th
+                | 专科基本信息
+          tbody
+            tr
+              td
+                | 1
+              td
+                | XX医院
+              td
+                | 东部
+              td
+                | A省
+              td
+                | A市
+              td
+                | 县级医院
+              td
+                | 三乙
+              td
+                a(href='hosintro') 进入医院信息页面
+              td
+                a(href='departmentlist') 专科基本信息
+            tr.active
+              td
+                | 1
+              td
+                | XX医院
+              td
+                | 中部
+              td
+                | A省
+              td
+                | A市
+              td
+                | 县级医院
+              td
+                | 二甲
+              td
+                a(href='hosintro') 进入医院信息页面
+              td
+                a(href='departmentlist') 专科基本信息
+            tr.active
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                | ┋
+              td
+                a(href='hosintro') 进入医院信息页面
+              td
+                a(href='departmentlist') 专科基本信息
+        .container
+          a.btn.btn-primary(href='hosdataedit') 增加
+        .pull-right       
+          +hospagelist
+          //此template是翻页
+
+template(name='hospagelist')
+  //此template是翻页
+  ul.pagination
+    li
+      a(href='#') Prev
+    li.disabled
+      a(href='#') 1
+    li
+      a(href='#') 2
+    li
+      a(href='#') 3
+    li
+      a(href='#') 4
+    li
+      a(href='#') 5
+    li
+      a(href='#') Next
+
+template(name='HosDropdownList')
+  //此template是下拉菜单
+  .collapse.navbar-collapse(id='searchhospital')
+    .btn-group
+      button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") 所在省/直辖市
+        span.caret  
+      ul.dropdown-menu(role="menu")
+        li
+          a(href="#") 广东省
+        li
+          a(href="#") 广西省
+        li
+          a(href="#") 海南省
+        li
+          a(href="#") 等
+    .btn-group
+      button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") 所在市
+        span.caret  
+      ul.dropdown-menu(role="menu")
+        li
+          a(href="#") 广州市
+        li
+          a(href="#") 珠海市
+        li
+          a(href="#") 等
+    .btn-group
+      button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") 分类
+        span.caret  
+      ul.dropdown-menu(role="menu")
+        li
+          a(href="#") 省会市属医院
+        li
+          a(href="#") 地级城市医院
+        li
+          a(href="#") 县级医院
+        li
+          a(href="#") 民营医院
+        li
+          a(href="#") 中医院
+        li
+          a(href="#") 其他
+    .btn-group
+      button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") 级别
+        span.caret  
+      ul.dropdown-menu(role="menu")
+        li
+          a(href="#") 一级
+        li
+          a(href="#") 二乙
+        li
+          a(href="#") 二甲
+        li
+          a(href="#") 三乙
+        li
+          a(href="#") 三甲
+        li
+          a(href="#") 其他
+  br

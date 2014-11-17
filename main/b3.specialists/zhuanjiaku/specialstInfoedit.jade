@@ -1,0 +1,24 @@
+template(name='spintroedit')
+  .container
+    // <span class="glyphicon glyphicon-star-emptyboth"></span>
+    p.text-warning 注：仅管理端
+  .container
+    .row.clearfix
+      .col-md-12.column
+        h3.text-center
+          | 专家修改页面
+          abbr.text-primary(title='编辑专家详细信息') 说明
+        .container
+          form.form-horizontal(role='form')
+            .form-group
+              label.col-xs-1(for='name') 名字
+              input#spname.col-xs-2(type='text', placeholder='张三')
+            .form-group
+              label.col-xs-1(for='introduce') 介绍
+              textarea#spintroduce.col-xs-6(type='text', rows='3')
+            .form-group
+              label.col-xs-1(for='hospitalimage') 图片
+              input#hospitalimage(type="file")
+              p 选择的图片会在信息介绍页面显示
+          button.btn.btn-default(type='button') 确认
+          a.btn.btn-warning(href='spintro')  取消

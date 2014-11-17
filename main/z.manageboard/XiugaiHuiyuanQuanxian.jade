@@ -1,0 +1,50 @@
+template(name='XiugaiHuiyuanQuanxian')
+  .container
+    .row
+      .col-md-12.column
+        p.text-warning 用户权限：系统管理员
+        h3.text-center 修改会员权限
+        form.form-horizontal(role="form")
+          .form-group
+            label.col-sm-2.control-label(for="inputhospitalnameofqs") 会员帐号*
+            .col-sm-10
+              input.form-control(type="text")
+          .form-group
+            label.col-sm-2.control-label(for="inputjibie") 会员分类*
+            .col-sm-10.controls
+              +VIPSelectOption
+          .pull-right
+            a.btn.btn-primary  确认
+ 
+template(name='VIPListNavbar') 
+  ul
+    li
+      | 信息
+      ul
+        li 
+          a(href='manage') 信息箱
+        li
+          a(href='unreadMessageNavbar') 未读信息
+        li
+          a(href='undoneMessageNavbar') 未处理信息
+    li 会员
+      ul
+        li 修改会员权限
+    li 
+      a(href='GonggaoGuanli') 公告管理
+    li 权重
+      ul
+        li
+          a(href='QuanzhongList') 权重列表
+        li
+          a(href='QuanzhongGuanli') 权重管理
+
+template(name='VIPSelectOption')
+  select(id="jibie" placeholder="点击选择分类")
+    option 点击选择会员分类
+    option 初级会员
+    option 普通会员
+    option 理事会员
+    option 常任理事会员
+    option 评委
+    option 医院录入员    

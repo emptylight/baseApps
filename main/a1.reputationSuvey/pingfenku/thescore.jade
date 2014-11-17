@@ -1,0 +1,21 @@
+template(name='thescore')
+  .container
+    .row.clearfix
+      .col-md-12.column
+        p.text-warning 用户权限:系统管理员
+        h2.text-center
+          | 医院专科排名
+        h3  骨科 
+          +KeshiPaiming
+        h3  儿科
+          +KeshiPaiming
+template(name='KeshiPaiming') 
+  h4 
+    ol
+      li
+        | A医院
+      li
+        | B医院
+      li
+        | C医院
+      a(href='allde') 此科室全部排名结果信息

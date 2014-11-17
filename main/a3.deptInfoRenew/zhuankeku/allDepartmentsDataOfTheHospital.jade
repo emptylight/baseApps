@@ -1,0 +1,50 @@
+template(name="hosallde")
+  .container
+    .row.clearfix
+      .col-md-12.column
+        p.text-warning 用户权限：系统管理员
+        h3.text-center
+          | XX医院指标数据修改页面
+        .container
+          .col-md-10.col-md-offset-1.column
+            ul.list-inline
+              li 专科：
+              li 
+                a(href="#") A科
+              li 
+                a(href="#") B科
+              li 
+                a(href="#") C科
+              li 
+                a(href="#") D 科
+              li 
+                a(href="#") E科
+              li
+                a(href="#") ……（设计要求：数据库上限为32个专科;后台管理：点击按钮后，获取并显示指向专科的信息）
+            h3 A科
+            table.table.table-hover.table-responsive
+              thead
+                tr
+                  th 一级指标
+                  th 二级指标
+                  th 三级指标
+                  th 本院数值
+              tbody
+                tr
+                  td 指标A
+                  td 指标B
+                  td 指标C
+                  td  xxx
+                tr
+                  td 指标A
+                  td 指标B
+                  td 指标C
+                  td  xxx
+                tr
+                  td ┋
+                  td ┋
+                  td ┋
+                  td    
+            a.btn.btn-primary(href='albedde') 修改
+            .container
+            br

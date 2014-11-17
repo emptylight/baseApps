@@ -1,0 +1,27 @@
+template(name='deadd')
+  .container
+    .row.clearfix
+      .col-md-12.column
+        h3.text-center
+          | 医院专科增加页面
+        .col-md-8.col-md-offset-2
+          form.form-horizontal(role="form")
+            .form-group
+              label.col-sm-2.control-label(for="inputleadername") 科主任
+              .col-sm-4
+                input.form-control(type="text")
+            .form-group
+              label.col-sm-2.control-label(for="inputdoctordata") 医生数
+              .col-sm-4
+                input.form-control(type="text")
+            .form-group
+              label.col-sm-2.control-label(for="inputnursedata") 护士数
+              .col-sm-4
+                input.form-control(type="text")
+            .form-group
+              label.col-sm-2.control-label(for="inputbeddata") 床位数
+              .col-sm-4
+                input.form-control(type="text")
+          .pull-right
+            button.btn.btn-primary 确认
+            a.btn.btn-warning(href="departmentlist") 取消

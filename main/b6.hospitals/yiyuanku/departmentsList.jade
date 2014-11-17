@@ -1,0 +1,64 @@
+template(name='departmentlist')
+  .container
+    // <span class="glyphicon glyphicon-star-emptyboth"></span>
+    p.text-warning 用户权限：系统管理员
+  .container
+    .row.clearfix
+      .col-md-12.column
+        h3.text-center
+          | 医院专科基本信息及评分列表
+        .container
+        h4  XX医院A科 
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 专科名
+              th 科主任
+              th
+                | 医师数
+              th
+                | 护士数
+              th
+                | 开放床位数
+              th
+                | 平均住院天数
+              th
+                | 床位使用率
+              th
+                | 专家评分
+                //a(href='thescoreofsp') 进入 »
+          tbody
+            tr
+              td
+                | B科
+              td
+                | 张三
+              td
+                | 199
+              td
+                | 199
+              td
+                | 199
+              td
+                | 199
+              td 20
+              td 9
+            tr
+             td
+                | A科
+              td
+                | 李四
+              td
+                | 199
+              td
+                | 199
+              td
+                | 199
+              td
+                | 199
+              td
+                | 199
+              td 1
+        .container
+          a.btn.btn-primary(href='deedit') 修改专科
+          a.btn.btn-primary(href='deadd') 增加专科

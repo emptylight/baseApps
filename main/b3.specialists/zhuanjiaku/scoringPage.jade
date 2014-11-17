@@ -1,0 +1,85 @@
+template(name='scorepage')
+  .container
+    // <span class="glyphicon glyphicon-star-emptyboth"></span>
+    p.text-warning 用户权限：评委和系统管理员
+  .container
+    .row.clearfix
+      .col-md-12.column
+        h2.text-center
+          | 专家评分页面
+        h3
+          | XX科室
+          p
+            small.text-primary 设计要求：显示该专家所属专科
+          p
+            small.text-sucess 后台管理：获取专家所属的专科信息并显示
+        h4.pull-right
+          | XX专家
+          p
+            small.text-primary 设计要求：显示该专家名字
+          p
+            small.text-sucess 后台管理：获取专家名字信息并显示
+        table.table.table-bordered
+          thead
+            tr
+              th
+                | 编号
+              th
+                | 评分
+              th
+                | 编号
+              th
+                | 评分
+          tbody
+            tr
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text', placeholder='填入数字l')
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text')
+            tr.active
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text')
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text')
+            tr.success
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text')
+              td
+                | XX医院
+              td
+                input.col-xs-4(type='text')
+            tr.warning
+              td
+                span XX医院
+              td
+                input.col-xs-4(type='text')
+              td
+                span XX医院
+              td
+                input.col-xs-4(type='text')
+            tr.danger
+              td
+                span XX医院
+              td
+                input.col-xs-4(type='text')
+              td
+                span XX医院
+              td
+                input.col-xs-4(type='text')
+        // <button class="btn btn-primary">确认</button>
+        a.btn.btn-primary(href='scoresuccess') 确认
+        a.btn.btn-warning(href='specialistlist') 取消
+        p
+          small.text-primary 设计要求：系统管理员点击确认后返回专家列表页面，评委点击确认后进入该专科评分结果页面；点击取消后均返回专家列表页面
+        p
+          small.text-sucess 后台管理：点击确认增加或修改评分数据
