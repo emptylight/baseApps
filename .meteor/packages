@@ -10,7 +10,6 @@ jquery
 email
 mizzao:bootstrap-3
 iron:dynamic-template
-iron:router
 aldeed:autoform
 alethes:pages
 mquandalle:jade
@@ -32,3 +31,5 @@ cfs:filesystem
 yogiben:autoform-file
 iron:core
 perak:user-roles
+iron:router
+
