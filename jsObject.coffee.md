@@ -1,3 +1,4 @@
+```
 # class and constructor are not needed
 baseObj =
   init: (obj) ->
@@ -22,3 +23,4 @@ no2.init
   age: 2
 
 no2.speak null
+```

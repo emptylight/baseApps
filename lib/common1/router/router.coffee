@@ -34,8 +34,6 @@ Router.map ->
   @route 'dedataedit'
   @route 'allde'
   @route 'hosdataedit'
-  @route 'deadd'
-  @route 'home'
   @route 'SpecialistMessageEditforsp'
   @route 'spfirstpage'
   @route 'scoresuccess'

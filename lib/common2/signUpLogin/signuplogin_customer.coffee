@@ -10,22 +10,22 @@ if Meteor.isClient
 			Session.set 'signup', false
 		'click a': (e, t) ->
 			e.preventDefault()
-			Session.set 'signup', false	
+			Session.set 'signup', false
 
-	Template.signupLogin_customer.visable = ->
-		Session.get 'signup'
+	Template.signupLogin_customer.helpers
+	 	visable: -> Session.get 'signup'
 
 
 	Template.login.events
 		'click button': (e, t) ->
 			e.preventDefault()
-			Meteor.loginWithPassword ($ '#li-username').val(), 
+			Meteor.loginWithPassword ($ '#li-username').val(),
 				($ '#li-password').val()
 				(err)-> console.log err
 
 		'click a': (e, t) ->
 			e.preventDefault()
-			Session.set 'signup', true 
+			Session.set 'signup', true
 
 	Template.logout.events
 		'click button': (e,t) ->
