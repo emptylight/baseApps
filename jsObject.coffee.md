@@ -1,8 +1,19 @@
 ```
-# class and constructor are not needed
+# class and constructor are not needed, while super is not necessary and not supported
+# this is read from an article which I've forgotten it's url
+
+### translated from JavaScript
 baseObj =
   init: (obj) ->
     {@name, @age} = obj
+
+  identify: ->
+    "I am #{@name}"
+###
+# In CoffeeScript it could be
+baseObj =
+  init: (@name, @age) ->
+    #{@name, @age} = obj
 
   identify: ->
     "I am #{@name}"
