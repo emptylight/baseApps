@@ -32,4 +32,4 @@ yogiben:autoform-file
 iron:core
 perak:user-roles
 iron:router
-
+froala:editor
