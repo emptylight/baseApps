@@ -55,6 +55,9 @@ if Meteor.isClient
   Tracker.autorun -> # it works already, without this line
     Meteor.subscribe "peopleContacts"
 
+  Template.peopleContacts.helpers
+    peopleContacts: PeopleContacts.find {}
+
 if Meteor.isServer
   #->
   Meteor.publish 'peopleContacts'

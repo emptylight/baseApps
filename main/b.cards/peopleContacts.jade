@@ -1,3 +1,8 @@
 template(name='peopleContacts')
-  +reactiveTable(collection = 'PeopleContacts')
+  // 這個是展示表；兩個庫寫法不一樣，第一個用變量，第二個用的是加上引號的 Collection 變量名字
+  +reactiveTable(collection = peopleContacts)
+  // 下面是填寫表；還可以有改寫表，用的是 update
+  +quickForm(collection= "PeopleContacts" id = 'insertContacts' type = 'insert')
+  //+quickForm(collection= "PeopleContacts" doc = this id = 'updateContacts' type = 'update')
+
   //autoform
