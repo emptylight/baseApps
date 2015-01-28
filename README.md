@@ -16,3 +16,5 @@ Use functional folders instead of structural folders. I.e,
 	login.js
 	...
 ```
+### loading order 裝載順序
+Meteor裝載順序有講究。為了避免混亂，採用了目錄加上abcd等等序號的方法。

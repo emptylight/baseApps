@@ -1,10 +1,10 @@
 # this is for both server and client sides
-Router.configure  
+Router.configure
     layoutTemplate: 'layout'
     loadingTemplate: 'loading'
 
 Router.onBeforeAction 'loading' # show loading template while waiting for the action
 
-Router.map -> 
+Router.map ->
   @route 'home', path:'/'
-  @route 'wlistTable'
+  @route 'cards'

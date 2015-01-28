@@ -69,6 +69,7 @@ localstorage@1.0.2
 logging@1.0.6
 meteor@1.1.4
 meteor-platform@1.2.1
+meteoric:ionic@0.1.11
 minifiers@1.1.3
 minimongo@1.0.6
 mizzao:bootstrap-3@3.3.1_1
@@ -82,9 +83,12 @@ mpowaga:string-template@0.1.0
 mquandalle:jade@0.4.1
 mrt:accounts-ui-bootstrap-3-blaze@0.3.10
 mrt:moment@2.8.1
+nemo64:bootstrap@3.3.1_1
+nemo64:bootstrap-data@3.3.1_1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
+pcuci:bootcards@1.0.0_6
 perak:user-roles@1.0.10
 raix:eventemitter@0.1.1
 raix:handlebar-helpers@0.2.4

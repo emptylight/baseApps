@@ -33,3 +33,5 @@ iron:core
 perak:user-roles
 iron:router
 froala:editor
+pcuci:bootcards
+meteoric:ionic
